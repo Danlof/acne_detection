@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.9
+    commands:
+      - pip install -r requirements.txt
+  pre_build:
+    commands:
+      # linting
+      - flake8
+
+  build:
+    commands:
+      - echo "Build started"
+      # Testing : Run unit test test and verify code functionality
+      - pytest tests/
+  post_build:
+    commands:
+      - echo "Build completed"
+      # Add any post-build steps here (e.g., artifact generation)
+artifacts:
+  files:
+    - '**/*'
