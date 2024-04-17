@@ -1,6 +1,6 @@
 keras_cv==0.8.2
-pd==1.5.3
-np == 1.25.2
-tf==2.15.0
-cv2==4.8.0
-matplotlib==3.8.3
+pd
+np 
+tf
+opencv-python
+matplotlib
